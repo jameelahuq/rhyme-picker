@@ -1,0 +1,40 @@
+.words {
+  display: block;
+}
+
+.hide {
+  display:none;
+}
+
+
+body {
+  background-color: black;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.pickWords  {
+  background-color: grey;
+}
+
+/*make it so it fills screen rather than pixel*/
+.countDownDisplay {
+  font-size: 600px;
+  /*height: Yu;*/
+  /*vertical-align: middle;*/
+  /*margin-left: -(X/2)u;*/
+  /*margin-top: -(Y/2)u;*/
+}
+
+.wordDisplay {
+  color: white;
+  outline-color: black;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 100%;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
+  font-weight: bolder;
+}
+
