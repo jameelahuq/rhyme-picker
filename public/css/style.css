@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "FranklinGothicRaw";
+  src: url("../assets/franklin-gothic-ultra.woff2")
+}
+
+
 .words {
   display: block;
 }
@@ -9,7 +15,7 @@
 
 body {
   background-color: black;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'FranklinGothicRaw','Helvetica', 'Arial', sans-serif;
 }
 
 .pickWords  {
@@ -19,10 +25,6 @@ body {
 /*make it so it fills screen rather than pixel*/
 .countDownDisplay {
   font-size: 600px;
-  /*height: Yu;*/
-  /*vertical-align: middle;*/
-  /*margin-left: -(X/2)u;*/
-  /*margin-top: -(Y/2)u;*/
 }
 
 .wordDisplay {
