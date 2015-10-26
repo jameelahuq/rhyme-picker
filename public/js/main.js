@@ -16,7 +16,8 @@ ngApp.controller('FindARhyme', function($scope, $window) {
   var timeCount = 4;
   var timerForSlideChange;
   var audio = new Audio('assets/EpicNinjaTurtleRapInstrumental.wav');
-  $scope.showLogo = null;
+  $scope.showLogo = "assets/blackoriginalorderfw.png";
+  $scope.isNoneOrBlock = "none";
 
   var players = {
     jameela:'#A95E5F' , neil: '#5B8498', art: '#8276BF', kyle: '#E5A37F'
@@ -68,6 +69,14 @@ ngApp.controller('FindARhyme', function($scope, $window) {
     104.852: colorCode['rapper4'],
     120.334: 'black'
   };
+  //
+  //var colorPerTimeObj = {
+  //  1.855: colorCode['rapper2'],
+  //  2.857: colorCode['rapper3'],
+  //  3.852: colorCode['rapper4'],
+  //  4.334: 'black'
+  //};
+
 
   var songTimes = Object.keys(colorPerTimeObj);
   var lastIntervalIndex = songTimes.length-1;
@@ -119,7 +128,8 @@ ngApp.controller('FindARhyme', function($scope, $window) {
         displayWord();
         changeSlide();
         if (showWordIntervals.indexOf(thisSwitch) === showWordIntervals.length-1) {
-          $scope.showLogo = "assets/blackoriginalorderfw.png"
+          $scope.isNoneOrBlock = "block";
+
         }
       }, thisTime * 1000 - lastTime * 1000);
     }

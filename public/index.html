@@ -19,7 +19,7 @@
 
   <div class="panel row">
    <div>Type in Words for Today's Show</div>
-    <form action="" class="words">
+    <form class="words">
       <input class="word" ng-model="word.one" ng-change="buttonCheck()" required/><br/>
       <input class="word" ng-model="word.two"  ng-change="buttonCheck()" required/><br/>
       <input class="word" ng-model="word.three" ng-change="buttonCheck()" required/><br/>
@@ -35,7 +35,7 @@
 <!--change this class name to something that makes more sense now that the words are also displayed-->
 <div ng-bind="countDownDisplay" class="countDownDisplay"></div>
 <div ng-bind="wordDisplay" class="wordDisplay" ng-style="{'font-size': dependsOnWordLength}"></div>
-<img ng-bind="logoDisplay" class="logoDisplay" ng-src={{showLogo}}>
+<img ng-bind="logoDisplay" class="logoDisplay" ng-src={{showLogo}} ng-style="{'display': isNoneOrBlock}">
 
 
 

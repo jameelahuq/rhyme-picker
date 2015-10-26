@@ -12,6 +12,12 @@
   display:none;
 }
 
+.logoDisplay {
+  display: none;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto
+}
 
 body {
   background-color: black;
