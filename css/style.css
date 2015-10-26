@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "FranklinGothicRaw";
+  src: url("../assets/franklin-gothic-ultra.woff2")
+}
+
+
+.words {
+  display: block;
+}
+
+.hide {
+  display:none;
+}
+
+.logoDisplay {
+  display: none;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto
+}
+
+body {
+  background-color: black;
+  font-family: 'FranklinGothicRaw','Helvetica', 'Arial', sans-serif;
+}
+
+.pickWords  {
+  background-color: grey;
+}
+
+/*make it so it fills screen rather than pixel*/
+.countDownDisplay {
+  font-size: 600px;
+}
+
+.wordDisplay {
+  color: white;
+  outline-color: black;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 100%;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
+  font-weight: bolder;
+}
+
