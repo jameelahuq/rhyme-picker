@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.5.3/css/foundation.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Jameela's Page</title>
+</head>
+
+
+<body ng-app="rhymes" ng-controller="FindARhyme" ng-style="{'background-color': eachBackground}">
+
+<div ng-model="wordInputPanel" ng-style="{'display': noneIfSongIsStarting}">
+  <div class="panel row">
+    <button class="practice" ng-click="startPractice()">Practice</button>
+  </div>
+
+  <div class="panel row">
+   <div>Type in Words for Today's Show</div>
+    <form action="" class="words">
+      <input class="word" ng-model="word.one" ng-change="buttonCheck()" required/><br/>
+      <input class="word" ng-model="word.two"  ng-change="buttonCheck()" required/><br/>
+      <input class="word" ng-model="word.three" ng-change="buttonCheck()" required/><br/>
+      <input class="word" ng-model="word.four" ng-change="buttonCheck()" required/><br/>
+      <input class="word" ng-model="word.five" ng-change="buttonCheck()" required/><br/>
+      <input class="word" ng-model="word.six" ng-change="buttonCheck()" required/><br/>
+      <input class="word" ng-model="word.seven" ng-change="buttonCheck()" required/><br/>
+      <button class="pickWords" ng-model="startButton" ng-style="{'background-color':isStartReady}" ng-click="startShow()">Start Show</button>
+    </form>
+  </div>
+</div>
+
+<!--change this class name to something that makes more sense now that the words are also displayed-->
+<div ng-bind="countDownDisplay" class="countDownDisplay"></div>
+<div ng-bind="wordDisplay" class="wordDisplay" ng-style="{'font-size': dependsOnWordLength}"></div>
+<img ng-bind="logoDisplay" class="logoDisplay" ng-src={{showLogo}}>
+
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
