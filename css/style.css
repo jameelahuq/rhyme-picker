@@ -33,12 +33,22 @@ body {
   font-size: 600px;
 }
 
+.topHalf {
+  position: relative;
+  height: 50%;
+}
+
+.bottomHalf {
+  background-color: black;
+  height: 50%;
+}
+
 .wordDisplay {
   color: white;
   outline-color: black;
   text-align: center;
   position: absolute;
-  top: 30%;
+  top: 50%;
   transform: translateY(-50%);
   width: 100%;
   -webkit-text-stroke-width: 4px;

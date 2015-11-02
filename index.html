@@ -6,17 +6,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.5.3/css/foundation.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
-  <title>Jameela's Page</title>
+  <title>Rhyme Chasers</title>
 </head>
 
 
 <body ng-app="rhymes" ng-controller="FindARhyme" ng-style="{'background-color': eachBackground}">
 
 <div ng-model="wordInputPanel" ng-style="{'display': noneIfSongIsStarting}">
-  <div class="panel row">
-    <button class="practice" ng-click="startPractice()">Practice</button>
-  </div>
-
   <div class="panel row">
    <div>Type in Words for Today's Show</div>
     <form class="words">
@@ -32,10 +28,15 @@
   </div>
 </div>
 
+<div class="topHalf">
 <!--change this class name to something that makes more sense now that the words are also displayed-->
-<div ng-bind="countDownDisplay" class="countDownDisplay"></div>
-<div ng-bind="wordDisplay" class="wordDisplay" ng-style="{'font-size': dependsOnWordLength}"></div>
-<img ng-bind="logoDisplay" class="logoDisplay" ng-src={{showLogo}} ng-style="{'display': isNoneOrBlock}">
+  <div ng-bind="countDownDisplay" class="countDownDisplay"></div>
+  <div ng-bind="wordDisplay" class="wordDisplay" ng-style="{'font-size': dependsOnWordLength}"></div>
+  <img ng-bind="logoDisplay" class="logoDisplay" ng-src={{showLogo}} ng-style="{'display': isNoneOrBlock}">
+</div>
+
+<div class="bottomHalf">
+</div>
 
 
 
