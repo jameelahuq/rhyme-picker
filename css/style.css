@@ -3,7 +3,6 @@
   src: url("../assets/franklin-gothic-ultra.woff2")
 }
 
-
 .words {
   display: block;
 }
@@ -13,6 +12,7 @@
 }
 
 .logoDisplay {
+
   display: none;
   height: 100%;
   margin-left: auto;
