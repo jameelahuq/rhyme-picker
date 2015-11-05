@@ -1,5 +1,4 @@
 TODO:
-load words, hide words with eye button
 better sizing on letters
 dangerous rhymes ahead
 show boxes better format

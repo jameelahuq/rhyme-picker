@@ -96,6 +96,8 @@ ngApp.controller('FindARhyme', function($scope, $window) {
           $scope.noneIfHideButtonPushed[key] = 'black'
       }
 
+      $scope.buttonCheck();
+
     } else {
       $scope.eyeOpen = "fa fa-eye";
       for (var key in $scope.word) {
@@ -122,7 +124,7 @@ ngApp.controller('FindARhyme', function($scope, $window) {
       words.push($scope.word[i]);
     }
 
-    if (words.length === 7) {
+    if (words.length === 7 && $scope.eyeOpen === "fa fa-eye-slash") {
       $scope.isStartReady = 'green';
     } else {
       $scope.isStartReady = 'grey';
@@ -211,7 +213,7 @@ ngApp.controller('FindARhyme', function($scope, $window) {
 
   $scope.startShow = function() {
     //event.preventDefault();
-    if(Object.keys($scope.word).length === 7) {
+    if(Object.keys($scope.word).length === 7 && $scope.eyeOpen === "fa fa-eye-slash") {
       console.log("This button was clicked!!");
       var wordObject = $scope.word;
       var objKeys = Object.keys(wordObject).sort();
