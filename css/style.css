@@ -3,8 +3,35 @@
   src: url("../assets/franklin-gothic-ultra.woff2")
 }
 
+/*.wordInputPanel {*/
+  /*float: left;*/
+/*}*/
+
+body {
+  font-size: 30px;
+  background-color: black;
+  font-family: 'FranklinGothicRaw','Helvetica', 'Arial', sans-serif;
+  padding: 30px;
+}
+
+
+.welcomePanel {
+  text-align: center;
+  margin-top: 30px;
+}
 .words {
   display: block;
+}
+
+.words input {
+  height: 50px;
+  font-size: 30px;
+  font-family: 'FranklinGothicRaw','Helvetica', 'Arial', sans-serif;
+  text-transform:uppercase;
+}
+
+textarea {
+  height: 30px;
 }
 
 .hide {
@@ -12,20 +39,19 @@
 }
 
 .logoDisplay {
-
   display: none;
   height: 100%;
   margin-left: auto;
   margin-right: auto
 }
 
-body {
-  background-color: black;
-  font-family: 'FranklinGothicRaw','Helvetica', 'Arial', sans-serif;
+
+.startButton  {
+  text-align: center;
 }
 
-.pickWords  {
-  background-color: grey;
+.startButton img {
+  height: 300px;
 }
 
 /*make it so it fills screen rather than pixel*/
@@ -34,19 +60,12 @@ body {
 }
 
 #hideButton {
-background-color: black;
-
-}
-
-.topHalf {
-  position: relative;
-  height: 50%;
-}
-
-.bottomHalf {
   background-color: black;
-  height: 50%;
+  font-size: 30px;
+
 }
+
+
 
 .wordDisplay {
   color: white;

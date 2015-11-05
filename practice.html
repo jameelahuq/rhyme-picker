@@ -18,15 +18,14 @@
   </div>
 </div>
 
-<div class="topHalf">
+<div class="displayPanels">
   <!--change this class name to something that makes more sense now that the words are also displayed-->
   <div ng-bind="countDownDisplay" class="countDownDisplay"></div>
-  <div ng-bind="wordDisplay" class="wordDisplay" ng-style="{'font-size': dependsOnWordLength}"></div>
+  <div ng-bind="wordDisplay" class="word1" ng-style="{'font-size': dependsOnWordLength}"></div>
+  <div ng-bind="wordDisplay" class="word2" ng-style="{'font-size': dependsOnWordLength}"></div>
   <img ng-bind="logoDisplay" class="logoDisplay" ng-src={{showLogo}} ng-style="{'display': isNoneOrBlock}">
 </div>
 
-<div class="bottomHalf">
-</div>
 
 
 

@@ -13,33 +13,43 @@
 
 <body ng-app="rhymes" ng-controller="FindARhyme" ng-style="{'background-color': eachBackground}">
 
-<div ng-model="wordInputPanel" ng-style="{'display': noneIfSongIsStarting}">
-  <div class="panel row">
-   <div>Type in Words for Today's Show</div>
-    <form class="words">
-      <input ng-style="{'background-color': noneIfHideButtonPushed.a}" ng-model="word.a" ng-change="buttonCheck()" required/><br/>
-      <input ng-style="{'background-color': noneIfHideButtonPushed.b}" ng-model="word.b" ng-change="buttonCheck()" required/><br/>
-      <input ng-style="{'background-color': noneIfHideButtonPushed.c}" ng-model="word.c" ng-change="buttonCheck()" required/><br/>
-      <input ng-style="{'background-color': noneIfHideButtonPushed.d}" ng-model="word.d" ng-change="buttonCheck()" required/><br/>
-      <input ng-style="{'background-color': noneIfHideButtonPushed.e}" ng-model="word.e" ng-change="buttonCheck()" required/><br/>
-      <input ng-style="{'background-color': noneIfHideButtonPushed.f}" ng-model="word.f" ng-change="buttonCheck()" required/><br/>
-      <input ng-style="{'background-color': noneIfHideButtonPushed.g}" ng-model="word.g" ng-change="buttonCheck()" required/><br/>
-      <button class="pickWords" ng-model="startButton" ng-style="{'background-color': isStartReady}" ng-click="startShow()">Start Show</button>
-    </form>
-  </div>
+<div class="wordInputPanel" ng-model="wordInputPanel" ng-style="{'display': noneIfSongIsStarting}">
 
-  <button id="hideButton" ng-click="hideWords()"><i  ng-class="eyeOpen"></i></button>
-  <!--<button><i class="fa fa-eye-slash"></i></button>-->
+  <!--<div class="columns medium-12">-->
+    <div class="startButton" ng-model="startButton" ng-style="{'background-color': isStartReady}">
+      <img ng-click="startShow()" src="assets/danger-sign.png">
+    </div>
+  <!--</div>-->
+
+  <form class="words">
+    <div class="row">
+      <div class="welcomePanel">Type in Words for Today's Show</div>
+    </div>
+    <div class="row">
+      <input ng-style="{'background-color': noneIfHideButtonPushed.a}" ng-model="word.a" ng-change="buttonCheck()" class="medium-4 columns" required/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.b}" ng-model="word.b" ng-change="buttonCheck()" class="medium-4 columns" required/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.c}" ng-model="word.c" ng-change="buttonCheck()" class="medium-4 columns" required/>
+    </div>
+    <div class="row">
+      <input ng-style="{'background-color': noneIfHideButtonPushed.d}" ng-model="word.d" ng-change="buttonCheck()" class="medium-6 columns" required/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.e}" ng-model="word.e" ng-change="buttonCheck()" class="medium-6 columns" required/>
+    </div>
+    <div class="row">
+      <input ng-style="{'background-color': noneIfHideButtonPushed.f}" ng-model="word.f" ng-change="buttonCheck()" class="medium-6 columns" required/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.g}" ng-model="word.g" ng-change="buttonCheck()" class="medium-6 columns" required/>
+    </div>
+    <div class="row">
+      <button id="hideButton" ng-click="hideWords()" class="medium-12 columns"><i  ng-class="eyeOpen"></i></button>
+    </div>
+  </form>
+
 </div>
 
-<div class="topHalf">
+<div class="displayPanels">
 <!--change this class name to something that makes more sense now that the words are also displayed-->
   <div ng-bind="countDownDisplay" class="countDownDisplay"></div>
   <div ng-bind="wordDisplay" class="wordDisplay" ng-style="{'font-size': dependsOnWordLength}"></div>
   <img ng-bind="logoDisplay" class="logoDisplay" ng-src={{showLogo}} ng-style="{'display': isNoneOrBlock}">
-</div>
-
-<div class="bottomHalf">
 </div>
 
 

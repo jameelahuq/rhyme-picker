@@ -1,15 +1,15 @@
 TODO:
-better sizing on letters
-dangerous rhymes ahead
-show boxes better format
-warning symbol for start
-div for show and practice
-no more than two words to a selection
-(if letters are too much)
-new line for new words
 
+1) no two letter words
+2) no more than two words to a selection - if more than that, get error immediately
+3) new line for new words (biggest one determines font)
+4) create pulsing glow when it's active
+5) color change on end
 
-better music sync (neil on sunday) tabbing, cache
+Neil TODO:
+1) photoshop hazard sign
+2) better music sync (neil on sunday) tabbing, cache
+
+(all the crazy stuff everybody hates)
 background pulse to the beats (round2, round3)
-pulsing word on round3
-color change on end
+& pulsing word on round3
