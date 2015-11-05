@@ -86,16 +86,23 @@ ngApp.controller('FindARhyme', function($scope, $window) {
 
   $scope.eyeOpen =  "fa fa-eye";
 
+  $scope.noneIfHideButtonPushed = {a:"white", b:"white", c:"white", d: "white", e: "white", f:"white"};
 
-  $scope.hidden = function() {
+  $scope.hideWords = function() {
     if ($scope.eyeOpen === "fa fa-eye") {
       $scope.eyeOpen = "fa fa-eye-slash";
+      for (var key in $scope.word) {
+        if ($scope.word[key] != false)
+          $scope.noneIfHideButtonPushed[key] = 'black'
+      }
+
     } else {
       $scope.eyeOpen = "fa fa-eye";
+      for (var key in $scope.word) {
+        $scope.noneIfHideButtonPushed[key] = 'white';
+      }
     }
   };
-
-
 
 
   $scope.startPractice = function() {

@@ -17,18 +17,18 @@
   <div class="panel row">
    <div>Type in Words for Today's Show</div>
     <form class="words">
-      <input class="word" ng-model="word.a" ng-change="buttonCheck()" required/><br/>
-      <input class="word" ng-model="word.b"  ng-change="buttonCheck()" required/><br/>
-      <input class="word" ng-model="word.c" ng-change="buttonCheck()" required/><br/>
-      <input class="word" ng-model="word.d" ng-change="buttonCheck()" required/><br/>
-      <input class="word" ng-model="word.e" ng-change="buttonCheck()" required/><br/>
-      <input class="word" ng-model="word.f" ng-change="buttonCheck()" required/><br/>
-      <input class="word" ng-model="word.g" ng-change="buttonCheck()" required/><br/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.a}" ng-model="word.a" ng-change="buttonCheck()" required/><br/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.b}" ng-model="word.b" ng-change="buttonCheck()" required/><br/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.c}" ng-model="word.c" ng-change="buttonCheck()" required/><br/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.d}" ng-model="word.d" ng-change="buttonCheck()" required/><br/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.e}" ng-model="word.e" ng-change="buttonCheck()" required/><br/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.f}" ng-model="word.f" ng-change="buttonCheck()" required/><br/>
+      <input ng-style="{'background-color': noneIfHideButtonPushed.g}" ng-model="word.g" ng-change="buttonCheck()" required/><br/>
       <button class="pickWords" ng-model="startButton" ng-style="{'background-color': isStartReady}" ng-click="startShow()">Start Show</button>
     </form>
   </div>
 
-  <button id="hideButton" ng-click="hidden()"><i  ng-class="eyeOpen"></i></button>
+  <button id="hideButton" ng-click="hideWords()"><i  ng-class="eyeOpen"></i></button>
   <!--<button><i class="fa fa-eye-slash"></i></button>-->
 </div>
 
@@ -41,7 +41,6 @@
 
 <div class="bottomHalf">
 </div>
-
 
 
 
