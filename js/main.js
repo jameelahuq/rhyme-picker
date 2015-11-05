@@ -74,14 +74,6 @@ ngApp.controller('FindARhyme', function($scope, $window) {
     104.852: colorCode['rapper4'],
     120.334: 'black'
   };
-  //
-  //var colorPerTimeObj = {
-  //  1.855: colorCode['rapper2'],
-  //  2.857: colorCode['rapper3'],
-  //  3.852: colorCode['rapper4'],
-  //  4.334: 'black'
-  //};
-
 
   var songTimes = Object.keys(colorPerTimeObj);
   var lastIntervalIndex = songTimes.length-1;
@@ -91,6 +83,18 @@ ngApp.controller('FindARhyme', function($scope, $window) {
   var randWord = function() {
     return todaysWordList[Math.floor(todaysWordList.length*Math.random())];
   };
+
+  $scope.eyeOpen =  "fa fa-eye";
+
+
+  $scope.hidden = function() {
+    if ($scope.eyeOpen === "fa fa-eye") {
+      $scope.eyeOpen = "fa fa-eye-slash";
+    } else {
+      $scope.eyeOpen = "fa fa-eye";
+    }
+  };
+
 
 
 
@@ -204,13 +208,12 @@ ngApp.controller('FindARhyme', function($scope, $window) {
       console.log("This button was clicked!!");
       var wordObject = $scope.word;
       var objKeys = Object.keys(wordObject).sort();
-      console.log(objKeys);
+
       for (var i in objKeys) {
         thisShowsWords.push(wordObject[objKeys[i]]);
-        console.log(thisShowsWords);
       }
+
       thisShowsWords.push("");
-      console.log(thisShowsWords);
       $scope.isBlack = 'black';
       startTimer();
     }

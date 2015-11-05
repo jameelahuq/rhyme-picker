@@ -33,6 +33,11 @@ body {
   font-size: 600px;
 }
 
+#hideButton {
+background-color: black;
+
+}
+
 .topHalf {
   position: relative;
   height: 50%;

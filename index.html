@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.5.3/css/foundation.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Rhyme Chasers</title>
@@ -23,9 +24,12 @@
       <input class="word" ng-model="word.e" ng-change="buttonCheck()" required/><br/>
       <input class="word" ng-model="word.f" ng-change="buttonCheck()" required/><br/>
       <input class="word" ng-model="word.g" ng-change="buttonCheck()" required/><br/>
-      <button class="pickWords" ng-model="startButton" ng-style="{'background-color':isStartReady}" ng-click="startShow()">Start Show</button>
+      <button class="pickWords" ng-model="startButton" ng-style="{'background-color': isStartReady}" ng-click="startShow()">Start Show</button>
     </form>
   </div>
+
+  <button id="hideButton" ng-click="hidden()"><i  ng-class="eyeOpen"></i></button>
+  <!--<button><i class="fa fa-eye-slash"></i></button>-->
 </div>
 
 <div class="topHalf">
