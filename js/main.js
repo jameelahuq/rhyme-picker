@@ -136,11 +136,9 @@ ngApp.controller('FindARhyme', function($scope, $window) {
   };
 
   //fast test (also change intervals)
-  var showWordIntervals = [1, 2, 3, 4, 5, 6, 7, lastIntervalIndex];
+  //var showWordIntervals = [1, 2, 3, 4, 5, 6, 7, lastIntervalIndex];
 
-  //var showWordIntervals = [18, 22, 24, 26, 27, 28, 29, lastIntervalIndex];
-  console.log("index of:", showWordIntervals.indexOf(lastIntervalIndex));
-
+  var showWordIntervals = [18, 22, 24, 26, 27, 28, 29, lastIntervalIndex];
 
   var changeSlide = function() {
     if (thisSwitch < lastIntervalIndex) {
