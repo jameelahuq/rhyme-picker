@@ -14,11 +14,11 @@ body {
   padding: 30px;
 }
 
-
 .welcomePanel {
   text-align: center;
   margin-top: 30px;
 }
+
 .words {
   display: block;
 }
@@ -30,21 +30,10 @@ body {
   text-transform:uppercase;
 }
 
-textarea {
-  height: 30px;
-}
 
 .hide {
   display:none;
 }
-
-.logoDisplay {
-  display: none;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto
-}
-
 
 .startButton  {
   text-align: center;
@@ -65,8 +54,6 @@ textarea {
 
 }
 
-
-
 .wordDisplay {
   color: white;
   outline-color: black;
@@ -80,3 +67,22 @@ textarea {
   font-weight: bolder;
 }
 
+.logoDisplay {
+  /*display: none;*/
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+.logoDisplay img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}

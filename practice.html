@@ -12,23 +12,20 @@
 
 <body ng-app="rhymes" ng-controller="FindARhyme" ng-style="{'background-color': eachBackground}">
 
-<div ng-moedel="wordInputPanel" ng-style="{'display': noneIfSongIsStarting}">
-  <div class="panel row">
-    <button class="practice" ng-click="startPractice()">Practice</button>
+  <div ng-moedel="wordInputPanel" ng-style="{'display': noneIfSongIsStarting}">
+    <div class="panel row">
+      <button class="practice" ng-click="startPractice()">Practice</button>
+    </div>
   </div>
-</div>
 
-<div class="displayPanels">
-  <!--change this class name to something that makes more sense now that the words are also displayed-->
-  <div ng-bind="countDownDisplay" class="countDownDisplay"></div>
-  <div ng-bind="wordDisplay" class="word1" ng-style="{'font-size': dependsOnWordLength}"></div>
-  <div ng-bind="wordDisplay" class="word2" ng-style="{'font-size': dependsOnWordLength}"></div>
-  <img ng-bind="logoDisplay" class="logoDisplay" ng-src={{showLogo}} ng-style="{'display': isNoneOrBlock}">
-</div>
-
-
-
-
+  <div class="displayPanels">
+    <!--change this class name to something that makes more sense now that the words are also displayed-->
+    <div ng-bind="countDownDisplay" class="countDownDisplay"></div>
+    <div ng-bind="wordDisplay" class="word1" ng-style="{'font-size': dependsOnWordLength}"></div>
+    <div ng-bind="logoDisplay" class="logoDisplay" ng-style="{'display': isNoneOrBlock}">
+      <img src=assets/blackoriginalorderfw.png >
+    </div>
+  </div>
 
 <script src="js/main.js"></script>
 </body>
